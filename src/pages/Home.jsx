@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div style={{ padding: "32px" }}>
+    <div className="page-container">
       <h1>Community Learning Hub</h1>
       <p>
         Learn digital skills through community hubs. Explore available hubs and courses.
       </p>
-      <div style={{ display: "flex", gap: "12px", marginTop: "20px" }}>
+
+      <div style={{ marginTop: "24px" }}>
         <Link to="/hubs">
           <button>View Hubs</button>
         </Link>

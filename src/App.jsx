@@ -2,21 +2,17 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Hubs from "./pages/Hubs";
 import Courses from "./pages/Courses";
+import "./App.css";
 
-function Navbar() {
-  return (
-    <nav style={{ padding: "16px", display: "flex", gap: "16px", borderBottom: "1px solid #ddd" }}>
-      <Link to="/">Home</Link>
-      <Link to="/hubs">Hubs</Link>
-      <Link to="/courses">Courses</Link>
-    </nav>
-  );
-}
-
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <nav style={{ padding: "20px" }}>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/hubs">Hubs</Link> |{" "}
+        <Link to="/courses">Courses</Link>
+      </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hubs" element={<Hubs />} />
@@ -25,3 +21,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App;
